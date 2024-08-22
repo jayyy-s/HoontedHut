@@ -1,0 +1,23 @@
+{
+  "homepage": "https://jayyy-s.github.io/HoontedHut",
+  "name": "threejs-journey-exercise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "vite": "^5.3.3",
+    "vite-plugin-restart": "^0.4.1"
+  },
+  "dependencies": {
+    "howler": "^2.2.4",
+    "lil-gui": "^0.19.2",
+    "three": "^0.166.1"
+  }
+}
