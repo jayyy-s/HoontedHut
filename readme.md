@@ -1,4 +1,8 @@
-# Three.js Journey
+# HoontedHut
+
+## Credit
+"Creepy Lullaby, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+Inspired by Three.js Journey lesson
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
