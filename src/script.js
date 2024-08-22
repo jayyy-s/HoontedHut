@@ -433,8 +433,12 @@ camera.add(listener);
 
 const sound = new THREE.PositionalAudio(listener);
 
+const audioUrl = window.location.hostname.includes("github")
+  ? "https://jayyy-s.github.io/HoontedHut/sounds/creepy-lullaby.wav?raw=true"
+  : "./sounds/creepy-lullaby.wav";
+
 const audioLoader = new THREE.AudioLoader();
-audioLoader.load("./sounds/creepy-lullaby.wav", function (buffer) {
+audioLoader.load(audioUrl, function (buffer) {
   sound.setBuffer(buffer);
   sound.setRefDistance(1);
   sound.setMaxDistance(20);
@@ -447,9 +451,14 @@ house.add(sound);
 debugObject.refDistance = 1;
 debugObject.maxDistance = 20;
 gui.add(debugObject, "refDistance").min(0).max(2).step(0.01);
-gui.add(debugObject, "maxDistance").min(1).max(100).step(1).onChange(() => {
-  sound.setMaxDistance(debugObject.maxDistance);
-});
+gui
+  .add(debugObject, "maxDistance")
+  .min(1)
+  .max(100)
+  .step(1)
+  .onChange(() => {
+    sound.setMaxDistance(debugObject.maxDistance);
+  });
 
 /**
  * Animate
